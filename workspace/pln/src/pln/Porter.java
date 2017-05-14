@@ -66,8 +66,8 @@ public class Porter {
 		}
 	}
 	
-	public static boolean terminaS(String out){
-		char s = out.charAt(out.length()-1);
+	public static boolean terminaS(char s){
+		//char s = out.charAt(out.length()-1);
 		if(s == 's'){
 			return true;
 		}else{
@@ -77,7 +77,9 @@ public class Porter {
 	
 	public static boolean estrelaD(int ultimo, int penultimo, char ult, char penult){
 		if(ultimo == 2 && penultimo == 2){
-			return true;
+			if(terminaS(ult) && terminaS(penult)){
+				return true;
+			}
 		}
 		return false;
 	}
