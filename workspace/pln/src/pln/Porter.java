@@ -8,7 +8,7 @@ import javax.print.attribute.Size2DSyntax;
 
 public class Porter {
 	
-	private static String texto = "yakuzay";
+	private static String texto = "roll";
 	private static int vetor[] = new int[texto.length()];
 	private static int nVogais, nConsoantes;
 	
@@ -17,9 +17,6 @@ public class Porter {
 		verificadorDeSequencia(texto, vetor, 0, 0);
 		int m = 0;
 		m = valorM(m, vetor);
-		//System.out.println("m: " + m + "\nv: " + nVogais + "\nc: " + nConsoantes);
-		String teste = "bowdlerize";
-		System.out.println(regra4(teste, 2));
 	}
 	
 	public static void verificadorDeSequencia(String out, int[] vector, int a, int b){
@@ -79,7 +76,7 @@ public class Porter {
 	
 	public static boolean estrelaD(int ultimo, int penultimo, char ult, char penult){
 		if(ultimo == 2 && penultimo == 2){
-			if(terminaS(ult) && terminaS(penult)){
+			if(ult == penult){
 				return true;
 			}
 		}
@@ -328,6 +325,9 @@ public class Porter {
 				}
 				out = out + "ble";
 			}
+			else{
+				out = entrada;
+			}
 		}
 		return out;
 	}
@@ -482,7 +482,37 @@ public class Porter {
 					
 				}
 			}
+			else{
+				out = entrada;
+			}
 		}
+		return out;
+	}
+	public static String regra5a(String entrada, int m){
+		String out = "";
+		if(m > 1 && entrada.charAt(entrada.length()-1) == 'e'){
+			for(int i = 0;i<entrada.length()-1;i++){
+				out = out + entrada.charAt(i);
+			}
+		}
+		else{
+			out = entrada;
+		}
+		return out;
+	}
+	public static String regra5b(String entrada, int m){
+		String out = "";
+		if(m > 1 && estrelaD(vetor[entrada.length()-1], vetor[entrada.length()-2],
+				entrada.charAt(entrada.length()-1), entrada.charAt(entrada.length()-2))){
+			
+			for(int i = 0;i<entrada.length()-1;i++){
+				out = out + entrada.charAt(i);
+			}
+		}
+		else{
+			out = entrada;
+		}
+		
 		return out;
 	}
 }
