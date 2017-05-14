@@ -75,7 +75,7 @@ public class Porter {
 		}
  	}
 	
-	public static boolean estrelaD(int ultimo, int penultimo){
+	public static boolean estrelaD(int ultimo, int penultimo, char ult, char penult){
 		if(ultimo == 2 && penultimo == 2){
 			return true;
 		}
