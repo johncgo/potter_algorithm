@@ -17,7 +17,9 @@ public class Porter {
 		verificadorDeSequencia(texto, vetor, 0, 0);
 		int m = 0;
 		m = valorM(m, vetor);
-		System.out.println("m: " + m + "\nv: " + nVogais + "\nc: " + nConsoantes);
+		//System.out.println("m: " + m + "\nv: " + nVogais + "\nc: " + nConsoantes);
+		String teste = "sensibiliti";
+		System.out.println(regra2(teste, 1));
 	}
 	
 	public static void verificadorDeSequencia(String out, int[] vector, int a, int b){
@@ -109,5 +111,224 @@ public class Porter {
 		return m;
 	}
 	
-
+	public static String regra2(String entrada, int m){
+		String out = "";
+		if(m > 0){
+			if(entrada.charAt(entrada.length()-1) == 'l' &&
+					entrada.charAt(entrada.length()-2) == 'a' &&
+					entrada.charAt(entrada.length()-3) == 'n' &&
+					entrada.charAt(entrada.length()-4) == 'o' &&
+					entrada.charAt(entrada.length()-5) == 'i' &&
+					entrada.charAt(entrada.length()-6) == 't' &&
+					entrada.charAt(entrada.length()-7) == 'a' ){
+				for(int i = 0;i<entrada.length()-7;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ate";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'l' &&
+					entrada.charAt(entrada.length()-2) == 'a' &&
+					entrada.charAt(entrada.length()-3) == 'n' &&
+					entrada.charAt(entrada.length()-4) == 'o' &&
+					entrada.charAt(entrada.length()-5) == 'i' &&
+					entrada.charAt(entrada.length()-6) == 't'){
+				for(int i = 0;i<entrada.length()-6;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "tion";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'c' &&
+					entrada.charAt(entrada.length()-3) == 'n' &&
+					entrada.charAt(entrada.length()-4) == 'e'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+				out = out + "ence";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'c' &&
+					entrada.charAt(entrada.length()-3) == 'n' &&
+					entrada.charAt(entrada.length()-4) == 'a'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+				out = out + "ance";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'r' &&
+					entrada.charAt(entrada.length()-2) == 'e' &&
+					entrada.charAt(entrada.length()-3) == 'z' &&
+					entrada.charAt(entrada.length()-4) == 'i'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ize";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 'b' &&
+					entrada.charAt(entrada.length()-4) == 'a'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "able";	
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 'l' &&
+					entrada.charAt(entrada.length()-4) == 'a'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "al";	
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 't' &&
+					entrada.charAt(entrada.length()-4) == 'n' &&
+					entrada.charAt(entrada.length()-5) == 'e'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "ent";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 'e'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "e";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 's' &&
+					entrada.charAt(entrada.length()-4) == 'u' &&
+					entrada.charAt(entrada.length()-5) == 'o'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "ous";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'n' &&
+					entrada.charAt(entrada.length()-2) == 'o' &&
+					entrada.charAt(entrada.length()-3) == 'i' &&
+					entrada.charAt(entrada.length()-4) == 't' &&
+					entrada.charAt(entrada.length()-5) == 'a' &&
+					entrada.charAt(entrada.length()-6) == 'z' &&
+					entrada.charAt(entrada.length()-7) == 'i' ){
+				for(int i = 0;i<entrada.length()-7;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ize";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'n' &&
+					entrada.charAt(entrada.length()-2) == 'o' &&
+					entrada.charAt(entrada.length()-3) == 'i' &&
+					entrada.charAt(entrada.length()-4) == 't' &&
+					entrada.charAt(entrada.length()-5) == 'a'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "ate";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'r' &&
+					entrada.charAt(entrada.length()-2) == 'o' &&
+					entrada.charAt(entrada.length()-3) == 't' &&
+					entrada.charAt(entrada.length()-4) == 'a'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "ate";	
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'm' &&
+					entrada.charAt(entrada.length()-2) == 's' &&
+					entrada.charAt(entrada.length()-3) == 'i' &&
+					entrada.charAt(entrada.length()-4) == 'l' &&
+					entrada.charAt(entrada.length()-5) == 'a'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "al";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 's' &&
+					entrada.charAt(entrada.length()-2) == 's' &&
+					entrada.charAt(entrada.length()-3) == 'e' &&
+					entrada.charAt(entrada.length()-4) == 'n' &&
+					entrada.charAt(entrada.length()-5) == 'e' &&
+					entrada.charAt(entrada.length()-6) == 'v' &&
+					entrada.charAt(entrada.length()-7) == 'i' ){
+				for(int i = 0;i<entrada.length()-7;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ive";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 's' &&
+					entrada.charAt(entrada.length()-2) == 's' &&
+					entrada.charAt(entrada.length()-3) == 'e' &&
+					entrada.charAt(entrada.length()-4) == 'n' &&
+					entrada.charAt(entrada.length()-5) == 'l' &&
+					entrada.charAt(entrada.length()-6) == 'u' &&
+					entrada.charAt(entrada.length()-7) == 'f' ){
+				for(int i = 0;i<entrada.length()-7;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ful";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 's' &&
+					entrada.charAt(entrada.length()-2) == 's' &&
+					entrada.charAt(entrada.length()-3) == 'e' &&
+					entrada.charAt(entrada.length()-4) == 'n' &&
+					entrada.charAt(entrada.length()-5) == 's' &&
+					entrada.charAt(entrada.length()-6) == 'u' &&
+					entrada.charAt(entrada.length()-7) == 'o' ){
+				for(int i = 0;i<entrada.length()-7;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ous";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 't' &&
+					entrada.charAt(entrada.length()-3) == 'i' &&
+					entrada.charAt(entrada.length()-4) == 'l' &&
+					entrada.charAt(entrada.length()-5) == 'a'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "al";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 't' &&
+					entrada.charAt(entrada.length()-3) == 'i' &&
+					entrada.charAt(entrada.length()-4) == 'v' &&
+					entrada.charAt(entrada.length()-5) == 'i'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+				out = out + "ive";
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 't' &&
+					entrada.charAt(entrada.length()-3) == 'i' &&
+					entrada.charAt(entrada.length()-4) == 'l' &&
+					entrada.charAt(entrada.length()-5) == 'i' &&
+					entrada.charAt(entrada.length()-6) == 'b'){
+				for(int i = 0;i<entrada.length()-6;i++){
+					out = out+ entrada.charAt(i);		
+				}
+				out = out + "ble";
+			}
+		}
+		return out;
+	}
 }
