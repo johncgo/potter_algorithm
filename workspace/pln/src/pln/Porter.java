@@ -18,8 +18,8 @@ public class Porter {
 		int m = 0;
 		m = valorM(m, vetor);
 		//System.out.println("m: " + m + "\nv: " + nVogais + "\nc: " + nConsoantes);
-		String teste = "sensibiliti";
-		System.out.println(regra2(teste, 1));
+		String teste = "bowdlerize";
+		System.out.println(regra4(teste, 2));
 	}
 	
 	public static void verificadorDeSequencia(String out, int[] vector, int a, int b){
@@ -327,6 +327,160 @@ public class Porter {
 					out = out+ entrada.charAt(i);		
 				}
 				out = out + "ble";
+			}
+		}
+		return out;
+	}
+	public static String regra4(String entrada, int m){
+		String out = "";
+		if(m > 1){
+			if(entrada.charAt(entrada.length()-1) == 'l' &&
+					entrada.charAt(entrada.length()-2) == 'a'){
+				for(int i = 0;i<entrada.length()-2;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 'c' &&
+					entrada.charAt(entrada.length()-3) == 'n' &&
+					entrada.charAt(entrada.length()-4) == 'a'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 'c' &&
+					entrada.charAt(entrada.length()-3) == 'n' &&
+					entrada.charAt(entrada.length()-4) == 'e'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'r' &&
+					entrada.charAt(entrada.length()-2) == 'e'){
+				for(int i = 0;i<entrada.length()-2;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'c' &&
+					entrada.charAt(entrada.length()-2) == 'i'){
+				for(int i = 0;i<entrada.length()-2;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 'b' &&
+					entrada.charAt(entrada.length()-4) == 'a'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 'l' &&
+					entrada.charAt(entrada.length()-3) == 'b' &&
+					entrada.charAt(entrada.length()-4) == 'i'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 't' &&
+					entrada.charAt(entrada.length()-2) == 'n' &&
+					entrada.charAt(entrada.length()-3) == 'a'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 't' &&
+					entrada.charAt(entrada.length()-2) == 'n' &&
+					entrada.charAt(entrada.length()-3) == 'e' &&
+					entrada.charAt(entrada.length()-4) == 'm' &&
+					entrada.charAt(entrada.length()-5) == 'e'){
+				for(int i = 0;i<entrada.length()-5;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 't' &&
+					entrada.charAt(entrada.length()-2) == 'n' &&
+					entrada.charAt(entrada.length()-3) == 'e' &&
+					entrada.charAt(entrada.length()-4) == 'm'){
+				for(int i = 0;i<entrada.length()-4;i++){
+					out = out+ entrada.charAt(i);	
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 't' &&
+					entrada.charAt(entrada.length()-2) == 'n' &&
+					entrada.charAt(entrada.length()-3) == 'e'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'n' &&
+					entrada.charAt(entrada.length()-2) == 'o' &&
+					entrada.charAt(entrada.length()-3) == 'i'){
+				if(entrada.charAt(entrada.length()-4) == 's' ||
+					entrada.charAt(entrada.length()-4) == 't'){
+					for(int i = 0;i<entrada.length()-3;i++){
+						out = out+ entrada.charAt(i);
+						
+					}
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'u' &&
+					entrada.charAt(entrada.length()-2) == 'o'){
+						for(int i = 0;i<entrada.length()-2;i++){
+							out = out+ entrada.charAt(i);	
+						}
+					}
+			else if(entrada.charAt(entrada.length()-1) == 'm' &&
+					entrada.charAt(entrada.length()-2) == 's' &&
+					entrada.charAt(entrada.length()-3) == 'i'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 't' &&
+					entrada.charAt(entrada.length()-3) == 'a'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'i' &&
+					entrada.charAt(entrada.length()-2) == 't' &&
+					entrada.charAt(entrada.length()-3) == 'i'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 's' &&
+					entrada.charAt(entrada.length()-2) == 'u' &&
+					entrada.charAt(entrada.length()-3) == 'o'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 'v' &&
+					entrada.charAt(entrada.length()-3) == 'i'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
+			}
+			else if(entrada.charAt(entrada.length()-1) == 'e' &&
+					entrada.charAt(entrada.length()-2) == 'z' &&
+					entrada.charAt(entrada.length()-3) == 'i'){
+				for(int i = 0;i<entrada.length()-3;i++){
+					out = out+ entrada.charAt(i);
+					
+				}
 			}
 		}
 		return out;
